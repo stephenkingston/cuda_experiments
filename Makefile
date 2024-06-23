@@ -1,7 +1,7 @@
 # Compiler
 CC = nvcc
 
-# Flags
+# Flags - arch sm_61 for the Pascal architecture on the GTX 1080Ti
 CFLAGS = -O3 -arch=sm_61
 
 # Executable
@@ -24,4 +24,5 @@ run: $(EXEC)
 	./$(OUT)/$(EXEC)
 
 clean:
-	rm -f $(OUT)/$(EXEC)
+	rm -f $(OUT)/**
+	rm -f *.pdb
